@@ -1,77 +1,91 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
-
 import React from 'react';
 import {
     Text,
-    View,
-    StyleSheet,
 } from 'react-native';
+import {
+    createSwitchNavigator,
+    createAppContainer,
+} from 'react-navigation';
+import {
+    createBottomTabNavigator,
+} from 'react-navigation-tabs';
+import Icon from 'react-native-vector-icons/FontAwesome5';
+import Home from './views/screens/Home/Home';
+import AddBlog from './views/screens/AddBlog/AddBlog';
+import EditBlog from './views/screens/EditBlog/EditBlog';
+import ShowBlog from './views/screens/ShowBlog/ShowBlog';
 
-import Tabs from 'react-native-tabs';
+const AppNavigator = createBottomTabNavigator(
+    {
+        Home: {
+            screen: Home,
+            navigationOptions: {
+                tabBarLabel: ({tintColor}) => (
+                    <Text style={{fontSize: 10, color: tintColor}}>
+                        {('Home')}
+                    </Text>
+                ),
+                tabBarIcon: ({horizontal, tintColor}) =>
+                    <Icon name="home" size={horizontal ? 20 : 25} color={tintColor} />,
+            },
+        },
+        ShowBlog: {
+            screen: ShowBlog,
+            navigationOptions: {
+                tabBarLabel: ({tintColor}) => (
+                    <Text style={{fontSize: 10, color: tintColor}}>
+                        {('Show blog')}
+                    </Text>
+                ),
+                tabBarIcon: ({horizontal, tintColor}) =>
+                    <Icon name="clipboard" size={horizontal ? 20 : 25} color={tintColor} />,
+            },
+        },
+        AddBlog: {
+            screen: AddBlog,
+            navigationOptions: {
+                tabBarLabel: ({tintColor}) => (
+                    <Text style={{fontSize: 10, color: tintColor}}>
+                        {('Add blog')}
+                    </Text>
+                ),
+                tabBarIcon: ({horizontal, tintColor}) =>
+                    <Icon name="plus" size={horizontal ? 20 : 25} color={tintColor} />,
+            },
+        },
+        EditBlog: {
+            screen: EditBlog,
+            navigationOptions: {
+                tabBarLabel: ({tintColor}) => (
+                    <Text style={{fontSize: 10, color: tintColor}}>
+                        {('Edit blog')}
+                    </Text>
+                ),
+                tabBarIcon: ({horizontal, tintColor}) =>
+                    <Icon name="edit" size={horizontal ? 20 : 25} color={tintColor} />,
+            },
+        },
+    },
+    {
+        tabBarOptions: {
+            activeTintColor: 'orange',
+            inactiveTintColor: 'gray',
+        },
+    },
+);
 
-// TODO: temp icons, to be replaced later
-import bookmarkOffIcon from './assets/icons/bookmark-off.png';
-import filterOffIcon from './assets/icons/bookmark-off.png';
-import callOffIcon from './assets/icons/bookmark-off.png';
-import IconButton from './views/components/buttons/IconButton';
+const InitialNavigator = createSwitchNavigator({
+    App: AppNavigator,
+});
+
+const AppContainer = createAppContainer(InitialNavigator);
 
 class App extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {};
-    }
-
     render() {
-        const self = this;
         return (
-            <View style={styles.container}>
-                <Text style={styles.welcome}>
-                    Welcome to React Native!
-                </Text>
-                <Tabs selected="second" style={{backgroundColor: 'white'}}>
-                    <View style={styles.bookmarkIcon}>
-                        <IconButton source={bookmarkOffIcon} />
-                    </View>
-                    <View style={styles.bookmarkIcon}>
-                        <IconButton source={filterOffIcon} />
-                    </View>
-                    <View style={styles.bookmarkIcon}>
-                        <IconButton source={callOffIcon} />
-                    </View>
-                </Tabs>
-            </View>
+            <AppContainer />
         );
     }
 }
 
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#F5FCFF',
-    },
-    welcome: {
-        fontSize: 20,
-        textAlign: 'center',
-        margin: 10,
-    },
-    instructions: {
-        textAlign: 'center',
-        color: '#333333',
-        marginBottom: 5,
-    },
-    bookmarkIcon: {
-        position: 'absolute',
-        bottom: 0,
-    },
-});
-
 export default App;
-
