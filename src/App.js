@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {
     Text,
 } from 'react-native';
@@ -80,7 +80,8 @@ const InitialNavigator = createSwitchNavigator({
 
 const AppContainer = createAppContainer(InitialNavigator);
 
-class App extends React.Component {
+class App extends Component {
+
     render() {
         return (
             <AppContainer />
