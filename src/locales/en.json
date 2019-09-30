@@ -1,0 +1,9 @@
+{
+  "appName": "Sample blog",
+  "navigation": {
+    "home": "Home",
+    "addBlog": "Add Blog",
+    "editBlog": "Edit Blog",
+    "showBlog": "Show Blog"
+  }
+}
