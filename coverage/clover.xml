@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1569941019401" clover="3.2.0">
+  <project timestamp="1569941019401" name="All files">
+    <metrics statements="62" coveredstatements="40" conditionals="2" coveredconditionals="1" methods="34" coveredmethods="11" elements="98" coveredelements="52" complexity="0" loc="62" ncloc="62" packages="8" files="10" classes="10"/>
+    <package name="constants">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.js" path="/Users/shiva.gunasehkaran/Documents/React_workspace/SampleBlog/src/constants/index.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="4" count="1" type="stmt"/>
+      </file>
+      <file name="oses.js" path="/Users/shiva.gunasehkaran/Documents/React_workspace/SampleBlog/src/constants/oses.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+      </file>
+      <file name="url.js" path="/Users/shiva.gunasehkaran/Documents/React_workspace/SampleBlog/src/constants/url.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="themes">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.js" path="/Users/shiva.gunasehkaran/Documents/React_workspace/SampleBlog/src/themes/index.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="themes.colors">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.js" path="/Users/shiva.gunasehkaran/Documents/React_workspace/SampleBlog/src/themes/colors/index.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="4" type="stmt"/>
+      </file>
+    </package>
+    <package name="views.screens.AddBlog">
+      <metrics statements="14" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="3"/>
+      <file name="AddBlog.js" path="/Users/shiva.gunasehkaran/Documents/React_workspace/SampleBlog/src/views/screens/AddBlog/AddBlog.js">
+        <metrics statements="14" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="3"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="58" count="0" type="stmt"/>
+        <line num="67" count="1" type="stmt"/>
+        <line num="75" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="views.screens.EditBlog">
+      <metrics statements="14" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="3"/>
+      <file name="EditBlog.js" path="/Users/shiva.gunasehkaran/Documents/React_workspace/SampleBlog/src/views/screens/EditBlog/EditBlog.js">
+        <metrics statements="14" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="8" coveredmethods="3"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="29" count="1" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="33" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="58" count="0" type="stmt"/>
+        <line num="67" count="1" type="stmt"/>
+        <line num="75" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="views.screens.Home">
+      <metrics statements="19" coveredstatements="9" conditionals="2" coveredconditionals="1" methods="13" coveredmethods="3"/>
+      <file name="Home.js" path="/Users/shiva.gunasehkaran/Documents/React_workspace/SampleBlog/src/views/screens/Home/Home.js">
+        <metrics statements="19" coveredstatements="9" conditionals="2" coveredconditionals="1" methods="13" coveredmethods="3"/>
+        <line num="9" count="1" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="31" count="1" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="42" count="1" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="53" count="1" type="stmt"/>
+        <line num="54" count="0" type="stmt"/>
+        <line num="58" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="59" count="1" type="stmt"/>
+        <line num="65" count="0" type="stmt"/>
+        <line num="70" count="0" type="stmt"/>
+        <line num="71" count="0" type="stmt"/>
+        <line num="72" count="0" type="stmt"/>
+        <line num="79" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="views.screens.Home.components">
+      <metrics statements="4" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="BlogsItem.js" path="/Users/shiva.gunasehkaran/Documents/React_workspace/SampleBlog/src/views/screens/Home/components/BlogsItem.js">
+        <metrics statements="4" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="views.screens.ShowBlog">
+      <metrics statements="6" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="2"/>
+      <file name="ShowBlog.js" path="/Users/shiva.gunasehkaran/Documents/React_workspace/SampleBlog/src/views/screens/ShowBlog/ShowBlog.js">
+        <metrics statements="6" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="2"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="41" count="1" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
