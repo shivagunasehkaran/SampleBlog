@@ -22,11 +22,12 @@ class ShowBlog extends Component {
     }
 
     render() {
+        const itemTitle = this.props.navigation.getParam('itemTitle');
         return (
             <View style={{flex: 1}}>
                 <View style={styles.container}>
                     <Text style={styles.title}>
-                        {('My Blog Title')}
+                        {itemTitle}
                     </Text>
                     <Text style={styles.content}>
                         {('My big blog post today is all about xyz.')}
