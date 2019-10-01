@@ -1,8 +1,22 @@
 import React, {Component} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import theme from '../../../themes';
+import Icon from 'react-native-vector-icons/FontAwesome5';
 
 class ShowBlog extends Component {
+    static navigationOptions = ({navigation}) => ({
+        title: ('Blog details'),
+        headerStyle: {
+            backgroundColor: theme.colors.buttonColor,
+        },
+        headerRight: (
+            <Icon style={{paddingRight: 15, color: theme.colors.black}}
+                  onPress={() => navigation.navigate('EditBlog')}
+                  name="edit"
+                  size={20} />
+        ),
+    });
+
     constructor(props) {
         super(props);
     }

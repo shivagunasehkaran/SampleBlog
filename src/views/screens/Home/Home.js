@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {SafeAreaView, FlatList, View, Text, StyleSheet} from 'react-native';
 import theme from '../../../themes';
+import Icon from 'react-native-vector-icons/FontAwesome5';
 
 const DATA = [
     {
@@ -29,6 +30,18 @@ const Item = ({title}) => {
 };
 
 class Home extends Component {
+    static navigationOptions = ({navigation}) => ({
+        title: ('Blog list'),
+        headerStyle: {
+            backgroundColor: theme.colors.buttonColor,
+        },
+        headerRight: (
+            <Icon style={{paddingRight: 15, color: theme.colors.black}}
+                  onPress={() => navigation.navigate('AddBlog')}
+                  name="plus"
+                  size={20} />
+        ),
+    });
 
     constructor(props) {
         super(props);
