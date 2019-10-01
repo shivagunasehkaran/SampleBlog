@@ -1,24 +1,56 @@
 import React, {Component} from 'react';
-import {
-    Text,
-} from 'react-native';
-import {
-    createSwitchNavigator,
-    createAppContainer,
-} from 'react-navigation';
-import {
-    createBottomTabNavigator,
-} from 'react-navigation-tabs';
+import {Text} from 'react-native';
+import {createAppContainer} from 'react-navigation';
+import {createBottomTabNavigator} from 'react-navigation-tabs';
+import {createStackNavigator} from 'react-navigation-stack';
+
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import Home from './views/screens/Home/Home';
 import AddBlog from './views/screens/AddBlog/AddBlog';
 import EditBlog from './views/screens/EditBlog/EditBlog';
 import ShowBlog from './views/screens/ShowBlog/ShowBlog';
+import theme from './themes';
 
-const AppNavigator = createBottomTabNavigator(
+const HomeScreen = createStackNavigator({
+    Home: {
+        screen: Home,
+        navigationOptions: {
+            title: ('Home'),
+        },
+    },
+});
+
+const ShowBlogScreen = createStackNavigator({
+    ShowBlog: {
+        screen: ShowBlog,
+        navigationOptions: {
+            title: ('Show blog'),
+        },
+    },
+});
+
+const AddBlogScreen = createStackNavigator({
+    AddBlog: {
+        screen: AddBlog,
+        navigationOptions: {
+            title: ('Add blog'),
+        },
+    },
+});
+
+const EditBlogScreen = createStackNavigator({
+    EditBlog: {
+        screen: EditBlog,
+        navigationOptions: {
+            title: ('Edit blog'),
+        },
+    },
+});
+
+const TabNavigator = createBottomTabNavigator(
     {
         Home: {
-            screen: Home,
+            screen: HomeScreen,
             navigationOptions: {
                 tabBarLabel: ({tintColor}) => (
                     <Text style={{fontSize: 10, color: tintColor}}>
@@ -30,7 +62,7 @@ const AppNavigator = createBottomTabNavigator(
             },
         },
         ShowBlog: {
-            screen: ShowBlog,
+            screen: ShowBlogScreen,
             navigationOptions: {
                 tabBarLabel: ({tintColor}) => (
                     <Text style={{fontSize: 10, color: tintColor}}>
@@ -42,7 +74,7 @@ const AppNavigator = createBottomTabNavigator(
             },
         },
         AddBlog: {
-            screen: AddBlog,
+            screen: AddBlogScreen,
             navigationOptions: {
                 tabBarLabel: ({tintColor}) => (
                     <Text style={{fontSize: 10, color: tintColor}}>
@@ -54,7 +86,7 @@ const AppNavigator = createBottomTabNavigator(
             },
         },
         EditBlog: {
-            screen: EditBlog,
+            screen: EditBlogScreen,
             navigationOptions: {
                 tabBarLabel: ({tintColor}) => (
                     <Text style={{fontSize: 10, color: tintColor}}>
@@ -68,20 +100,18 @@ const AppNavigator = createBottomTabNavigator(
     },
     {
         tabBarOptions: {
-            activeTintColor: 'orange',
-            inactiveTintColor: 'gray',
+            activeTintColor: theme.colors.buttonColor,
+            inactiveTintColor: theme.colors.secondaryText,
+            style: {
+                backgroundColor: theme.colors.divider,
+            },
         },
     },
 );
 
-const InitialNavigator = createSwitchNavigator({
-    App: AppNavigator,
-});
-
-const AppContainer = createAppContainer(InitialNavigator);
+const AppContainer = createAppContainer(TabNavigator);
 
 class App extends Component {
-
     render() {
         return (
             <AppContainer />
