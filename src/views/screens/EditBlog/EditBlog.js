@@ -3,6 +3,13 @@ import {View, Text, TextInput, TouchableOpacity, StyleSheet} from 'react-native'
 import theme from '../../../themes';
 
 class EditBlog extends Component {
+    static navigationOptions = ({navigation}) => ({
+        title: ('Edit blogs'),
+        headerStyle: {
+            backgroundColor: theme.colors.buttonColor,
+        },
+    });
+
     constructor(props) {
         super(props);
         this.state = {
@@ -50,7 +57,7 @@ class EditBlog extends Component {
                     onPress={
                         () => this.save(this.state.title, this.state.content)
                     }>
-                    <Text style={theme.colors.white}> {('Save')} </Text>
+                    <Text style={styles.saveButtonText}> {('Save')} </Text>
                 </TouchableOpacity>
             </View>
         );
@@ -85,6 +92,11 @@ const styles = StyleSheet.create({
         padding: 10,
         margin: 15,
         height: 40,
+    },
+    saveButtonText: {
+        fontSize: 15,
+        fontWeight: '500',
+        color: theme.colors.black,
     },
 });
 

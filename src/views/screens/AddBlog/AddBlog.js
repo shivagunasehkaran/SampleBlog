@@ -1,8 +1,16 @@
 import React, {Component} from 'react';
 import {View, Text, TextInput, StyleSheet, TouchableOpacity} from 'react-native';
 import theme from '../../../themes';
+import Icon from 'react-native-vector-icons/FontAwesome5';
 
 class AddBlog extends Component {
+    static navigationOptions = ({navigation}) => ({
+        title: ('Add blogs'),
+        headerStyle: {
+            backgroundColor: theme.colors.buttonColor,
+        },
+    });
+
     constructor(props) {
         super(props);
         this.state = {
@@ -50,7 +58,7 @@ class AddBlog extends Component {
                     onPress={
                         () => this.save(this.state.title, this.state.content)
                     }>
-                    <Text style={theme.colors.white}> {('Save')} </Text>
+                    <Text style={styles.saveButtonText}> {('Save')} </Text>
                 </TouchableOpacity>
             </View>
         );
@@ -85,6 +93,11 @@ const styles = StyleSheet.create({
         padding: 10,
         margin: 15,
         height: 40,
+    },
+    saveButtonText: {
+        fontSize: 15,
+        fontWeight: '500',
+        color: theme.colors.black,
     },
 });
 
