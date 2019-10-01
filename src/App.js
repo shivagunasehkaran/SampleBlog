@@ -14,36 +14,24 @@ import theme from './themes';
 const HomeScreen = createStackNavigator({
     Home: {
         screen: Home,
-        navigationOptions: {
-            title: ('Home'),
-        },
     },
 });
 
 const ShowBlogScreen = createStackNavigator({
     ShowBlog: {
         screen: ShowBlog,
-        navigationOptions: {
-            title: ('Show blog'),
-        },
     },
 });
 
 const AddBlogScreen = createStackNavigator({
     AddBlog: {
         screen: AddBlog,
-        navigationOptions: {
-            title: ('Add blog'),
-        },
     },
 });
 
 const EditBlogScreen = createStackNavigator({
     EditBlog: {
         screen: EditBlog,
-        navigationOptions: {
-            title: ('Edit blog'),
-        },
     },
 });
 
