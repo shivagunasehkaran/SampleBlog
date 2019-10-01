@@ -67,7 +67,7 @@ class EditBlog extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        paddingTop: 100,
+        paddingTop: 10,
     },
     title: {
         fontSize: 15,

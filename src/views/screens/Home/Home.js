@@ -29,6 +29,7 @@ const Item = ({title}) => {
 };
 
 class Home extends Component {
+
     constructor(props) {
         super(props);
     }
@@ -49,7 +50,7 @@ class Home extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        marginTop: 100,
+        marginTop: 10,
     },
     item: {
         backgroundColor: theme.colors.divider,

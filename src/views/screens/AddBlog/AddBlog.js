@@ -67,7 +67,7 @@ class AddBlog extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        paddingTop: 100,
+        paddingTop: 10,
     },
     title: {
         fontSize: 15,
@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
         borderWidth: 1,
     },
     saveButton: {
-        backgroundColor: 'orange',
+        backgroundColor: theme.colors.buttonColor,
         padding: 10,
         margin: 15,
         height: 40,

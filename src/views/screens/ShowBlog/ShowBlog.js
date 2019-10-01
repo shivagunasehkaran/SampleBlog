@@ -25,7 +25,7 @@ class ShowBlog extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        top: 100,
+        top: 10,
         height: 300,
         marginLeft: 10,
         marginRight: 10,
