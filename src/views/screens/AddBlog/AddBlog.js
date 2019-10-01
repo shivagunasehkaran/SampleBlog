@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import {View, Text, TextInput, StyleSheet, TouchableOpacity} from 'react-native';
 import theme from '../../../themes';
-import Icon from 'react-native-vector-icons/FontAwesome5';
 
 class AddBlog extends Component {
     static navigationOptions = ({navigation}) => ({
