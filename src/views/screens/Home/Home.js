@@ -1,25 +1,8 @@
 import React, {Component} from 'react';
-import {SafeAreaView, FlatList, View, Text, StyleSheet} from 'react-native';
+import {FlatList, View, Text, StyleSheet, ActivityIndicator} from 'react-native';
 import theme from '../../../themes';
 import Icon from 'react-native-vector-icons/FontAwesome5';
-
-const DATA = [
-    {
-        title: 'Blog title 1',
-    },
-    {
-        title: 'Blog title 2',
-    },
-    {
-        title: 'Blog title 3',
-    },
-    {
-        title: 'Blog title 4',
-    },
-    {
-        title: 'Blog title 5',
-    },
-];
+import constants from '../../../constants';
 
 const Item = ({title}) => {
     return (
@@ -45,17 +28,52 @@ class Home extends Component {
 
     constructor(props) {
         super(props);
+        this.state = {
+            loading: true,
+            dataSource: [],
+        };
     }
 
-    render() {
+    componentDidMount() {
+        fetch(constants.url.url)
+            .then(response => response.json())
+            .then((responseJson) => {
+                this.setState({
+                    loading: false,
+                    dataSource: responseJson,
+                });
+            })
+            .catch(error => console.log(error)); //to catch the errors if any
+    }
+
+    FlatListItemSeparator = () => {
         return (
-            <SafeAreaView style={styles.container}>
+            <View style={{
+                height: .5,
+                width: '100%',
+                backgroundColor: theme.colors.divider,
+            }}
+            />
+        );
+    };
+
+    render() {
+        if (this.state.loading) {
+            return (
+                <View style={styles.loader}>
+                    <ActivityIndicator size="large" color="orange" />
+                </View>
+            );
+        }
+        return (
+            <View style={styles.container}>
                 <FlatList
-                    data={DATA}
-                    renderItem={({item}) => <Item title={item.title} />}
-                    keyExtractor={item => item.id}
+                    data={this.state.dataSource}
+                    ItemSeparatorComponent={this.FlatListItemSeparator}
+                    renderItem={({item}) => <Item title={item.name} />}
+                    keyExtractor={item => item.id.toString()}
                 />
-            </SafeAreaView>
+            </View>
         );
     }
 }
@@ -66,7 +84,6 @@ const styles = StyleSheet.create({
         marginTop: 10,
     },
     item: {
-        backgroundColor: theme.colors.divider,
         padding: 15,
         marginVertical: 1,
         marginHorizontal: 10,
