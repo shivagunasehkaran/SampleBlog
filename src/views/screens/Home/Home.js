@@ -1,16 +1,9 @@
 import React, {Component} from 'react';
-import {FlatList, View, Text, StyleSheet, ActivityIndicator} from 'react-native';
+import {FlatList, View, StyleSheet, ActivityIndicator, TouchableOpacity} from 'react-native';
 import theme from '../../../themes';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import constants from '../../../constants';
-
-const Item = ({title}) => {
-    return (
-        <View style={styles.item}>
-            <Text style={styles.title}>{title}</Text>
-        </View>
-    );
-};
+import BlogsItem from './components/BlogsItem';
 
 class Home extends Component {
     static navigationOptions = ({navigation}) => ({
@@ -57,6 +50,10 @@ class Home extends Component {
         );
     };
 
+    onBlogItemPressed = title => {
+        this.props.navigation.navigate('ShowBlog', {itemTitle: title});
+    };
+
     render() {
         if (this.state.loading) {
             return (
@@ -70,7 +67,8 @@ class Home extends Component {
                 <FlatList
                     data={this.state.dataSource}
                     ItemSeparatorComponent={this.FlatListItemSeparator}
-                    renderItem={({item}) => <Item title={item.name} />}
+                    renderItem={({item}) => <BlogsItem itemTitle={item.name}
+                                                       onPress={() => this.onBlogItemPressed(item.name)} />}
                     keyExtractor={item => item.id.toString()}
                 />
             </View>
@@ -82,14 +80,6 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         marginTop: 10,
-    },
-    item: {
-        padding: 15,
-        marginVertical: 1,
-        marginHorizontal: 10,
-    },
-    title: {
-        fontSize: 18,
     },
 });
 
