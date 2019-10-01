@@ -1,0 +1,221 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "paddingTop": 10,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "black",
+          "fontSize": 15,
+          "paddingLeft": 15,
+        }
+      }
+    >
+      Enter New Title
+    </Text>
+    <TextInput
+      allowFontScaling={true}
+      autoCapitalize="none"
+      onChangeText={[Function]}
+      placeholder="Title"
+      placeholderTextColor="#686868"
+      rejectResponderTermination={true}
+      style={
+        Object {
+          "borderColor": "black",
+          "borderWidth": 1,
+          "height": 40,
+          "margin": 15,
+        }
+      }
+      underlineColorAndroid="transparent"
+    />
+    <Text
+      style={
+        Object {
+          "color": "black",
+          "fontSize": 15,
+          "paddingLeft": 15,
+        }
+      }
+    >
+      Enter New Content
+    </Text>
+    <TextInput
+      allowFontScaling={true}
+      autoCapitalize="none"
+      onChangeText={[Function]}
+      placeholder="Content"
+      placeholderTextColor="#686868"
+      rejectResponderTermination={true}
+      style={
+        Object {
+          "borderColor": "black",
+          "borderWidth": 1,
+          "height": 40,
+          "margin": 15,
+        }
+      }
+      underlineColorAndroid="transparent"
+    />
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "orange",
+          "height": 40,
+          "margin": 15,
+          "opacity": 1,
+          "padding": 10,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "black",
+            "fontSize": 15,
+            "fontWeight": "500",
+          }
+        }
+      >
+         
+        Save
+         
+      </Text>
+    </View>
+  </View>
+</View>
+`;
+
+exports[`renders correctly edit blog 1`] = `
+<View
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "paddingTop": 10,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "black",
+          "fontSize": 15,
+          "paddingLeft": 15,
+        }
+      }
+    >
+      Enter New Title
+    </Text>
+    <TextInput
+      allowFontScaling={true}
+      autoCapitalize="none"
+      onChangeText={[Function]}
+      placeholder="Title"
+      placeholderTextColor="#686868"
+      rejectResponderTermination={true}
+      style={
+        Object {
+          "borderColor": "black",
+          "borderWidth": 1,
+          "height": 40,
+          "margin": 15,
+        }
+      }
+      underlineColorAndroid="transparent"
+    />
+    <Text
+      style={
+        Object {
+          "color": "black",
+          "fontSize": 15,
+          "paddingLeft": 15,
+        }
+      }
+    >
+      Enter New Content
+    </Text>
+    <TextInput
+      allowFontScaling={true}
+      autoCapitalize="none"
+      onChangeText={[Function]}
+      placeholder="Content"
+      placeholderTextColor="#686868"
+      rejectResponderTermination={true}
+      style={
+        Object {
+          "borderColor": "black",
+          "borderWidth": 1,
+          "height": 40,
+          "margin": 15,
+        }
+      }
+      underlineColorAndroid="transparent"
+    />
+    <View
+      accessible={true}
+      focusable={true}
+      isTVSelectable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "backgroundColor": "orange",
+          "height": 40,
+          "margin": 15,
+          "opacity": 1,
+          "padding": 10,
+        }
+      }
+    >
+      <Text
+        style={
+          Object {
+            "color": "black",
+            "fontSize": 15,
+            "fontWeight": "500",
+          }
+        }
+      >
+         
+        Save
+         
+      </Text>
+    </View>
+  </View>
+</View>
+`;
