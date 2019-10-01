@@ -84,6 +84,7 @@ const styles = StyleSheet.create({
     input: {
         margin: 15,
         height: 40,
+        paddingLeft: 5,
         borderColor: theme.colors.black,
         borderWidth: 1,
     },
@@ -96,6 +97,7 @@ const styles = StyleSheet.create({
     saveButtonText: {
         fontSize: 15,
         fontWeight: '500',
+        textAlign: 'center',
         color: theme.colors.black,
     },
 });
