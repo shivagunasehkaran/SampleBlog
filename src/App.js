@@ -3,8 +3,8 @@ import {Text} from 'react-native';
 import {createAppContainer} from 'react-navigation';
 import {createBottomTabNavigator} from 'react-navigation-tabs';
 import {createStackNavigator} from 'react-navigation-stack';
-
 import Icon from 'react-native-vector-icons/FontAwesome5';
+
 import Home from './views/screens/Home/Home';
 import AddBlog from './views/screens/AddBlog/AddBlog';
 import EditBlog from './views/screens/EditBlog/EditBlog';
@@ -41,7 +41,7 @@ const TabNavigator = createBottomTabNavigator(
             screen: HomeScreen,
             navigationOptions: {
                 tabBarLabel: ({tintColor}) => (
-                    <Text style={{fontSize: 10, color: tintColor}}>
+                    <Text style={{textAlign: 'center', fontSize: 10, color: tintColor}}>
                         {('Home')}
                     </Text>
                 ),
@@ -53,7 +53,7 @@ const TabNavigator = createBottomTabNavigator(
             screen: ShowBlogScreen,
             navigationOptions: {
                 tabBarLabel: ({tintColor}) => (
-                    <Text style={{fontSize: 10, color: tintColor}}>
+                    <Text style={{textAlign: 'center', fontSize: 10, color: tintColor}}>
                         {('Show blog')}
                     </Text>
                 ),
@@ -65,7 +65,7 @@ const TabNavigator = createBottomTabNavigator(
             screen: AddBlogScreen,
             navigationOptions: {
                 tabBarLabel: ({tintColor}) => (
-                    <Text style={{fontSize: 10, color: tintColor}}>
+                    <Text style={{textAlign: 'center', fontSize: 10, color: tintColor}}>
                         {('Add blog')}
                     </Text>
                 ),
@@ -77,7 +77,7 @@ const TabNavigator = createBottomTabNavigator(
             screen: EditBlogScreen,
             navigationOptions: {
                 tabBarLabel: ({tintColor}) => (
-                    <Text style={{fontSize: 10, color: tintColor}}>
+                    <Text style={{textAlign: 'center', fontSize: 10, color: tintColor}}>
                         {('Edit blog')}
                     </Text>
                 ),
